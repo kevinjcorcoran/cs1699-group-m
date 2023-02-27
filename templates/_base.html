@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- from main.py -->
+		<title>Group M: {{page_title}}</title>
+		<!--yaml uses /s as static url-->
+		<link rel="stylesheet" href="/static/styles.css" />
+        <link rel="icon" href="/static/images/grey-pawprint.png">
+	</head>
+
+	<body>
+        <header class="header">
+            <div class="title">
+                <img class="logo" src="/static/images/grey-pawprint.png" alt="Grey Pawprint">
+                <h1>BreedAI</h1>
+            </div>
+            <div class="navigation">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!--content from templates-->
+        {% block content %}{% endblock %}
+	</body>
+</html>
