@@ -9,6 +9,10 @@ body {
     font-weight: 300;
 }
 
+.dogs {
+    max-width: 60%;
+}
+
 .body-text {
     margin: 0px;
     color: #5c5c5c;
