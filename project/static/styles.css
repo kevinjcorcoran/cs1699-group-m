@@ -1,0 +1,83 @@
+body {
+    font-family: "Open Sans",sans-serif;
+    font-style: normal;
+    margin: 0px;
+    background-color: #e6e3e3;
+    font-size: 15px;
+    line-height: 24px;
+    color: #454545;
+    font-weight: 300;
+}
+
+.dogs {
+    width: 60%;
+}
+
+.body-text {
+    margin: 0px;
+    color: #5c5c5c;
+}
+
+.logo {
+    max-width: 5%;
+    max-height: 5%;
+    padding-right: 20px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.title h1 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #454545;
+    line-height: 24px;
+    height: 24px;
+    margin: 0px;    
+}
+
+.header {
+    background-color:rgb(243, 243, 243);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 5px 30px 5px 20px;
+    -webkit-box-shadow: 0 1px 5px rgba(57, 63, 72, 0.3);
+    -moz-box-shadow: 0 1px 5px rgba(57, 63, 72, 0.3);
+    box-shadow: 0 1px 5px rgba(57, 63, 72, 0.3);
+}
+
+.navigation ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+.navigation a {
+    font-size: 16px;
+    font-weight: normal;
+    color: #454545;
+    text-decoration: none;
+    line-height: 24px;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.app-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 40px 10px 40px;
+}
+
+.app-body h2 {
+    font-weight: 400;
+    font-size: 30px;
+}
