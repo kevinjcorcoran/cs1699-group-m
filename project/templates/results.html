@@ -2,8 +2,8 @@
 
 <div class="app-body">
 	<h2>Results:</h2>
-    <p>Your dog {{descriptor}} a {{breed}}.</p>
-    <p>Here are some helpful links with information about this breed:</p>
+    <p>Your dog {{descriptor}} a {{breed}} ({{precision}}% confidence).</p>
+    <p>Here are some helpful links with information about {{plural_breed}}:</p>
     {% for link in search_results %}
     <a href="{{link}}">{{link}}</a>
     {% endfor %}

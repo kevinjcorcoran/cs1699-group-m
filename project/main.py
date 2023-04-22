@@ -32,14 +32,16 @@ def upload_and_predict():
 
         results = predict(file_path)
 
-        breed = results['breed']
+        breed = (' '.join(word.capitalize() for word in results['breed'].split('_')))
+        plural_breed = breed + 's' if not breed.endswith('s') else breed + 'es'
+
+        precision = round((results['precision']*100), 2)
         precision_descriptor = get_precision_descriptor(results['precision'])
 
         os.remove(file_path)
 
         google_results = google_search_breed(breed)
-
-        return render_template("results.html", page_title="Results", breed=breed, descriptor=precision_descriptor, search_results=google_results)
+        return render_template("results.html", page_title="Results", breed=breed, plural_breed=plural_breed, descriptor=precision_descriptor, search_results=google_results, precision=precision)
     
 
 def get_precision_descriptor(precision):
@@ -62,7 +64,7 @@ def get_precision_descriptor(precision):
     elif precision >= 0.1:
         return 'barely looks like'
     else:
-        return 'doesn\'t look like anything but sure, it\'s'
+        return 'doesn\'t look like anything, but I guess it\'s'
 
 
 def google_search_breed(breed):
