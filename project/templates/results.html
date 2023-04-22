@@ -2,7 +2,11 @@
 
 <div class="app-body">
 	<h2>Results:</h2>
-    <p>We think your dog is a {{breed}} with {{precision}} percent confidence.</p>
+    <p>Your dog {{descriptor}} a {{breed}}.</p>
+    <p>Here are some helpful links with information about this breed:</p>
+    {% for link in search_results %}
+    <a href="{{link}}">{{link}}</a>
+    {% endfor %}
 </div>
 
 {% endblock %}

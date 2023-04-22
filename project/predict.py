@@ -26,7 +26,7 @@ def predict(file_path):
     score = tf.nn.softmax(predictions[0])
 
     breed = class_names[np.argmax(score)]
-    precision = 100*np.max(score)
+    precision = np.max(score)
 
     results = {'breed': breed, 'precision': precision}
     
